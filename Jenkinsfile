@@ -27,7 +27,7 @@ pipeline{
      
      success{ echo 'SUCCESS will execute if the build result is successful.'}
      
-     faliure{ echo 'FALIURE will execute if the build result is fail.'}
+     failure{ echo 'FAILURE will execute if the build result is fail.'}
      }
      
   }
