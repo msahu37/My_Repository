@@ -1,0 +1,30 @@
+pipeline{
+  agent any
+  enviornment{
+  NEW_VERSION='1.1.1'
+  SERVER_CREDENTIALS=credentials('server-credentials')
+  }
+      stages{
+            stage("build"){
+            steps{
+              echo 'buiding the application.....'
+              echo ('Building version ${NEW_VERSION}')
+              }
+            }
+     
+     
+            stage("test"){
+            steps{
+              echo 'testing the application.....'
+              }
+            }
+     
+   
+            stage("deploy"){
+            steps{
+              echo 'deploying the application.....'
+              }
+            }
+      }
+  
+  }
